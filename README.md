@@ -1,4 +1,3 @@
-Blog-Round-3-
-=============
+# Blog
 
-Need to practice some new tech so here's another stab at a simple blogging platform.
+a [Sails](http://sailsjs.org) application
