@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html ng-app="sam-stiles-blog">
   <head>
-    <title>New Sails App</title>
+    <meta charset="UTF-8">
+    <title>Blog | Samuel Stiles</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="http://davidwalsh.name/wp-content/themes/klass/img/facebooklogo.png"/>
+    <meta property="og:site_name" content="Samuel Stiles Blog"/>
+    <meta property="og:type" content="blog"/>
+    <meta property="og:title" content="Recent Posts | Blog @ www.samstil.es"/>
 
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/importer.css">
-    <!--STYLES END-->
+    <link rel="stylesheet" href="/dependancies/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/dependancies/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/styles/importer.css" type="text/css">
   </head>
-  <body>
+  <body style="display: none;">
 
-    <script src="/js/app.js"></script>
+    <header>
+        <div class="contact-icons">
+            <a href="https://github.com/Latros"><i class="fa fa-github"></i></a>
+            <a href="http://twitter.com/samueldev"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.linkedin.com/in/samuelstiles"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:sam@phasesolutions.ca"><i class="fa fa-envelope"></i></a>
+        </div>
+
+        <div class="titles">
+            <h1><span class="name">Samuel Stiles</span>
+            <br>
+            <span class="next-line">Full-stack developer from Canada.</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div><a href="/">Home</a></div>
+        <div><a href="/about">About</a></div>
+        <div><a href="/contact">Contact</a></div>
+        <div><a href="/links">Links</a></div>
+        <div><a href="/category/programming">Programming</a></div>
+        <div><a href="/category/climbing">Climbing</a></div>
+    </nav>
+
+    <section class="blog-list">
+      <div class="view" ng-view></div>
+    </section>
+
+    <script src="/dependancies/jquery/dist/jquery.min.js"></script>
     <script src="/dependancies/angular/angular.min.js"></script>
     <script src="/dependancies/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="/dependancies/angular-ui-utils/ui-utils.min.js"></script>
+    <script src="/dependancies/modernizr/modernizr.js"></script>
+    <script src="/dependancies/jquery-timeago/jquery.timeago.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.js"></script>
 
   </body>
 </html>
