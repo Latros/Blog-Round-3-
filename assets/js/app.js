@@ -1,8 +1,8 @@
-var blogApp = angular.module('sam-stiles-blog', ['ui.utils']);
+var blogApp = angular.module('sam-stiles-blog', ['ngRoute', 'ngAnimate']);
 
 blogApp.controller('HomeController', function($scope, posts){
 
-  console.log(posts);
+  console.log(JSON.stringify(posts, null, 2));
 
   $scope.state = {};
   window.scope = $scope;
@@ -16,11 +16,13 @@ blogApp.config(function($routeProvider, $locationProvider) {
     templateUrl:'/templates/home.html',
     controller: 'HomeController',
     resolve: {
-      "posts": function($http, $rootScope, $location){
+      "posts": function($http, $location){
         return $http.get("/blogpost?limit=5")
         .then(function(successResponse){
-          return successResponse;
+          console.log('Got data successfully!');
+          return successResponse.data;
         }, function(errorResponse){
+          console.log('Error!');
           return $location.path('/error');
         });
       }
