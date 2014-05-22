@@ -1,0 +1,22 @@
+{
+  "name": "Blog-Round-3-",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Latros/Blog-Round-3-",
+  "authors": [
+    "Samuel Stiles <sam@phasesolutions.ca>"
+  ],
+  "description": "A third stab at a blogging engine, just for shits.",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

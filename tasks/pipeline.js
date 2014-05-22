@@ -22,13 +22,9 @@ var cssFilesToInject = [
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
-
-  // Dependencies like sails.io.js, jQuery, or Angular
-  // are brought in here
-  'js/dependencies/**/*.js',
-
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
+  'dependancies/angular/angular.min.js',
+  'dependancies/angular-ui-router/release/angular-ui-router.min.js',
+  'dependancies/angular-ui-utils/ui-utils.min.js',
   'js/**/*.js'
 ];
 
