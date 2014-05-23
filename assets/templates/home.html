@@ -1,1 +1,5 @@
-<h1>asdf</h1>
+<div class="post" ng-repeat="post in state.posts">
+  <span class="date">Posted <abbr class="timeago" title="{{ post.createdAt }}"></abbr></span>
+  <h3><a href="/read/{{ post.slug }}">{{ post.title }}</a></h3>
+  <p>{{ post.summary }} <span><a href="/read/{{ post.slug }}">... read more</a></span></p>
+</div>

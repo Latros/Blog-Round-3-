@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 
     initAboutLinks();
 
-    resizeHeader();
+    initHeader();
 
     $('body').hide();
     $(window).load(function(){
@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
 });
 
-function resizeHeader() {
+function initHeader() {
 
     $('header').height($(window).height() * 0.40);
 
@@ -23,7 +23,9 @@ function resizeHeader() {
 }
 
 function initTimeAgo() {
+    console.log('timeagoing!');
     $('abbr.timeago').timeago();
+    console.log($('abbr.timeago').timeago());
 }
 
 function initAboutLinks() {

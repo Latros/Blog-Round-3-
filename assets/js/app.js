@@ -20,6 +20,12 @@ blogApp.config(function($routeProvider, $locationProvider) {
         return $http.get("/blogpost?limit=5")
         .then(function(successResponse){
           console.log('Got data successfully!');
+
+          successResponse.data.forEach(function(post){
+            post.createdAt = post.createdAt.substring(0, post.createdAt.length - 5) + 'Z';
+            post.summary = post.content.substring(0, post.content.indexOf('</p>') -1 );
+          });
+
           return successResponse.data;
         }, function(errorResponse){
           console.log('Error!');
